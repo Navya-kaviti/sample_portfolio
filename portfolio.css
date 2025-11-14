@@ -1,0 +1,111 @@
+body {
+   margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(270deg, #ff6ec4, #7873f5);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+header img {
+  object-fit: cover;
+}
+.ani{
+  font-size: 30px;
+}
+.glow-cards {
+  position: relative;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3); /* subtle blue glow */
+  transition: 0.4s ease;
+}
+.glow-card {
+  position: relative;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.3); /* subtle blue glow */
+  transition: 0.4s ease;
+}
+
+.glow-card:hover {
+  box-shadow: 0 0 25px rgba(0, 123, 255, 0.8), 
+              0 0 40px rgba(0, 123, 255, 0.4);
+  transform: translateY(-5px);
+}
+
+/* Optional: glowing gradient corners */
+.glow-card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00e1ff, #007bff, #9c27b0, #ff00ff);
+  z-index: 0;
+  filter: blur(20px);
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+#education{
+  background-color: white;
+  width: 100%;
+}
+
+.glow-card:hover::before {
+  opacity: 0.35;
+}
+
+.glow-card * {
+  position: relative;
+  z-index: 1;
+}
+.skill-icon {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+}
+
+
+.zoom img:hover{
+  width: 400px;
+  transform: translate(20px,20px);
+}
+section {
+  scroll-margin-top: 64px;
+}
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 1rem;
+}
+.card-img-top {
+  max-height: 170px;
+  object-fit: cover;
+}
+header{
+  background-image: url("./WD.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  color: white;
+}
